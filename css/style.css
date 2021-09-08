@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.main_header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	z-index: 999999;
+}
+#navbar_top.fixed-top{
+	background-color: #DDFFBC;
+	transition: all 0.2s ease-in-out;
+	animation: animateMe 0.2s linear;
+}
+@keyframes animateMe{
+	0%{
+		transform: translateY(-80px);
+	}	
+	100%{
+		transform: translateY(0);
+	}	
+}
+
+
+
+.navbar-brand img{
+	margin-top: -7px;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+button[aria-expanded="true"]{
+	background-image: url(../images/cancel.png);
+	background-size: 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 99999;
+	filter: grayscale(10);
+	filter: invert(60%);
+}
+button[aria-expanded="true"] .navbar-toggler-icon{
+	opacity: 0;
+}
+#main_nav{
+	margin-bottom: 0;
+	margin-left: 150px;
+}
+#main_nav li {
+	margin-right: 30px;
+}
+#main_nav li a {
+	color: #333;
+	font-weight: 400;
+}
+#main_nav .nav-item a.active{
+	color: #5CAC0E;
+}
+
+.log-user a{
+	color: #333;
+}
+
+.hero_section{
+	position: relative;
+	overflow-x: hidden;
+}
+.hero_section .container{
+	height: 100vh;
+
+}
+.hero-content {
+	/* margin-top: 275px; */
+	position: absolute;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hero-content h1{
+	font-weight: 500;
+	font-size: 46px;
+	color: #5CAC0E;
+
+	margin-bottom: 5px;
+}
+.hero-content h2{
+	font-weight: 500;
+	font-size: 34px;
+	color: #333;
+
+	margin-bottom: 10px;
+}
+.hero-content p{
+	font-weight: 300;
+	font-size: 16px;
+	color: #333;
+
+	margin-bottom: 15px;
+}
+.site-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 400;
+	background: #5CAC0E;
+	padding: 14px 30px;
+	border-radius: 25px;
+}
+.site-btn:hover{
+	opacity: 0.9;
+	color: #fff;
+}
+
+.amar .box{
+	width: 100%;
+	height: 35vmin;
+	background: repeating-linear-gradient(45deg,transparent, red 5px, green 5px),
+				repeating-linear-gradient(-45deg,#ddd, #333 5px, #fff 5px);
+}

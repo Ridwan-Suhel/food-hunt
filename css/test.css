@@ -1,0 +1,314 @@
+.container_mars {
+	position: relative;
+	display: block;
+	width: 100vmin;
+	height: 100%;
+	margin: auto;
+	z-index: 100;
+}
+
+.container_mars .content {
+	position: relative;
+	width: 100%;
+	/*height: 100%;*/
+	/*height: 73vh;*/
+	text-align: center;
+
+	top: 340px;
+}
+
+
+.container_mars .content .helmet {
+	position: absolute;
+	width: 100%;
+	/*height: 100%;*/
+	/*top: 9vmin;*/
+	/*top: 0px;*/
+	background: red;
+}
+
+
+.container_mars .content .helmet .planet_position {
+	position: absolute;
+	width: 37vmin;
+	height: 37vmin;
+	/*background: black;*/
+	/*box-shadow: 0 10px 20px 10px black;*/
+	border-radius: 50%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+
+/*.container_mars .content .helmet .planet_position .planet_shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 -1.5vmax 3vmax 1.2vmax black;
+	border-radius: 50%;
+	z-index: 3;
+}*/
+
+.container_mars .content .helmet .planet_position .planet_photo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url("https://i.kinja-img.com/gawker-media/image/upload/s--gBFsZfZv--/c_scale,fl_progressive,q_80,w_800/18mozgxwgu2ibjpg.jpg");
+	background-repeat: no-repeat;
+	/*background-position: center -75%;*/
+	background-position: center center;
+	/*background-size: 150%;*/
+	background-size: cover;
+	z-index: 1;
+	will-change: background;
+}
+
+.container_mars .bottom {
+	position: relative;
+	width: 100%;
+	height: 28vh;
+	z-index: 999999;
+
+	top: 200px;
+}
+
+.container_mars .bottom .my_nav {
+	width: 100%;
+	z-index: 9999;
+	display: flex;
+	justify-content: space-between;
+
+	top: 225px;
+    position: absolute;
+}
+
+.my_nav #next,
+.my_nav #prev{
+	width: 40px;
+	height: 40px;
+	background: #5CAC0E;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.my_nav .icon{
+	width: 2px;
+	height: 18px;
+	background: #fff;
+	position: relative;
+	display: inline-block;
+}
+
+.my_nav .icon:before{
+	content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid transparent;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(45deg);
+    background: transparent;
+}
+
+.container_mars .bottom .orbit {
+	position: absolute;
+	top: 5vh;
+	width: 100%;
+	height: 100vmin;
+
+	border-radius: 50%;
+	border: 3px dashed #eee;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+
+.container_mars .bottom .orbit .planet_container {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transition: transform 0.7s ease-in;
+}
+
+.container_mars .bottom .orbit .planet_container .planet {
+	position: absolute;
+	border-radius: 50%;
+	width: 5vmin;
+	height: 5vmin;
+	transition: transform 0.4s linear;
+	will-change: transform;
+}
+
+.container_mars .bottom .orbit .planet_container .pt {
+	transition: transform 0.4s ease-in;
+	transform: scale(1.7);
+	will-change: transform;
+}
+
+.container_mars .bottom .orbit .planet_container .earth {
+	background: #3399ff;
+	top: -2.5vmin;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.container_mars .bottom .orbit .planet_container .earth .moon span {
+	top: -1vmin;
+	left: -1vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .mars {
+	background: #FDB05E;
+	right: 12vmin;
+	top: 12vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .mars .moon span {
+	width: 0.5vmin;
+	height: 0.5vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .mars .moon span:nth-child(1) {
+	top: -1vmin;
+	left: -1vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .mars .moon span:nth-child(2) {
+	left: 1vmin;
+	bottom: -1vmin !important;
+}
+
+.container_mars .bottom .orbit .planet_container .jupiter {
+	background: #996633;
+	right: -2.5vmin;
+	bottom: 46.5vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .saturn {
+	background: #8A8975;
+	right: 12vmin;
+	bottom: 12vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .saturn .ring {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 0 5px white, 0 0 0 8px rgba(0, 0, 0, 0.5), 0 0 0 12px #d6d6c2;
+	border-radius: 50%;
+}
+
+.container_mars .bottom .orbit .planet_container .uranus {
+	background: #C4EAED;
+	right: 0;
+	left: 0;
+	margin: auto;
+	bottom: -2.5vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .neptune {
+	background: #3347BA;
+	left: 12vmin;
+	bottom: 12vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .mercury {
+	background: #6E6E6E;
+	left: -2.5vmin;
+	bottom: 46.5vmin;
+}
+
+.container_mars .bottom .orbit .planet_container .venus {
+	background: #d2a679;
+	left: 12vmin;
+	top: 12vmin;
+}
+
+.container_mars .bottom .orbit .name_container {
+	position: absolute;
+	display: flex;
+	width: auto;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 8vh;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container_mars .bottom .orbit .name_container .more {
+	width: 100%;
+	padding: 8px 0;
+	color: #bbb;
+	font-weight: 500;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+
+.container_mars .bottom .orbit .name_container .more:hover {
+	color: #888;
+	transition: color 0.3s;
+}
+
+.container_mars .bottom .orbit .name_container .pn {
+	font-size: 25px;
+	color: #666;
+	text-transform: uppercase;
+	padding-bottom: 4px;
+	letter-spacing: 8px;
+	padding-left: 8px;
+	border-bottom: 3px solid #bbb;
+}
+
+.container_mars .bottom .orbit .name_container .pn .letter {
+	display: inline-block;
+	line-height: 1em;
+	opacity: 0;
+}
+
+.moon {
+	width: 100%;
+	height: 100%;
+	animation: planet_rotation 2s infinite linear;
+}
+
+.moon span {
+	width: 0.8vmin;
+	height: 0.8vmin;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+}
+
+@keyframes planet_rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
